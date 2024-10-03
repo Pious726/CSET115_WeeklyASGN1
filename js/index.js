@@ -21,7 +21,7 @@ function enterEvent(buttonPress) {
 }
 
 
-// Functions for performing action
+// Functions for solving equation
 function equalsButton() {
     if (buttonPress.key == "enter") {
         let x = document.getElementById("result").value;
@@ -33,6 +33,7 @@ function solveEquation() {
     let y = math.evaluate(x)
     document.getElementById("result").value = y
 }
+
 
 // Functions to clear the calculator
 function clearInput() {
