@@ -40,3 +40,7 @@ function clearInput() {
 function clearResult() {
     document.getElementById("result").value = "";
 }
+function deleteInput() {
+    let del = document.getElementById("result");
+    del.value = del.value.slice(0, -1);
+}
