@@ -10,23 +10,23 @@
     <h1>Calculator</h1>
     <div class ="calculator">
         <div id = "buttons">
-            <textarea id = "display"></textarea>
-          <button onclick = "ClearButton()">Clear</button> 
+            <div id = "inpu"></div>
+            <textarea id = "result"></textarea>
+          <button onclick = "clearInput()">Clear</button>
           <button onclick = "DeleteButton()">Delete</button>
-          <button onclick = "ClearEntryButton()">CE</button>
           <button onclick = "PercentButton()">%</button>
           <button onclick = "SquareRootButton()">√</button>
           <button onclick = "SquaredButton()">x^2</button>
           <button onclick = "InverseButton()">1/x</button>
           <button onclick = "NegateButton()">+/-</button>
-          <button onclick = "EqualButton()">=</button> 
+          <button onclick = "EqualsButton()">=</button> 
           <button onclick= "DivideButton()">/</button>
           <button onclick = "MultiplyButton()">*</button>
           <button onclick = "SubtractButton()">-</button>
           <button onclick = "AddButton()">+</button>
           <button onclick = "DecimalButton()">.</button>
-          <button onclick= "ZeroButton()">0</button>
-          <button onclick = "OneButton()">1</button>
+          <button onclick= "dis('0')" onkeydown="enterValue(buttonPress)">0</button>
+          <button onclick = "dis('1')" onkeydown="enterValue(buttonPress)">1</button>
           <button onclick = "TwoButton()">2</button>
           <button onclick = "ThreeButton()">3</button>
           <button onclick = "FourButton()">4</button>
@@ -38,7 +38,7 @@
           
         </div>
     </div>
- 
+ <script src = "js/index.js"></script>
 </body>
-<script src="script.js"></script>
+
 </html>
