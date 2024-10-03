@@ -1,11 +1,11 @@
 let input = document.getElementById("input");
 let operation = "";
 
+
 // Functions for operation input
 function enterValues(val) {
     document.getElementById("result").value += val;
 }
-
 function enterEvent(buttonPress) {
     if (buttonPress.key == "0" || buttonPress.key == "1"
         || buttonPress.key == "2" || buttonPress.key == "3"
@@ -18,16 +18,19 @@ function enterEvent(buttonPress) {
     }
 }
 
-function clearInput() {
-    document.getElementById("input").value = "";
-}
-function clearResult() {
-    document.getElementById("result").value = "";
-}
 
 // Functions for performing action
 function equalsButton(firstNumber, secondNumber) {
     if (operation == "+") {
         result.innerHTML = firstNumber + secondNumber;
     }
+}
+
+
+// Functions to clear the calculator
+function clearInput() {
+    document.getElementById("input").value = "";
+}
+function clearResult() {
+    document.getElementById("result").value = "";
 }
