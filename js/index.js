@@ -2,29 +2,10 @@ let input = document.getElementById("input");
 let operation = "";
 
 
-// Functions for operation input
-<<<<<<< HEAD
 
-function dis(val) {
-    document.getElementById("result").value += val
-}
-function enterEvent(buttonPress) {
-    document.getElementById("input").value += val;
-    if (buttonPress.key == "0" || buttonPress.key == "1"
-        || buttonPress.key == "2" || buttonPress.key == "3"
-        || buttonPress.key == "4" || buttonPress.key == "5"
-        || buttonPress.key == "6" || buttonPress.key == "7"
-        || buttonPress.key == "8" || buttonPress.key == "9"
-        || buttonPress.key == "+" || buttonPress.key == "-"
-        || buttonPress.key == "*" || buttonPress.key == "/"
-        || buttonPress.key == "^2" || buttonPress.key == "√") 
-        {
-        document.getElementById("input").value += buttonPress.key
-    }
-=======
+// Functions for operation input
 function enterValue(value) {
     document.getElementById("input").value += value;
->>>>>>> 3733a2a13105f546fb9ab8b6efd50e5a5542b00f
 }
 
 
@@ -36,6 +17,9 @@ function equalsButton() {
     }
 }
 function solveEquation() {
+    let input = document.getElementById("input").value
+    let result = eval(input);
+    document.getElementById("result").value = result;
     
 }
 
