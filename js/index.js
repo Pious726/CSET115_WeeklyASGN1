@@ -9,19 +9,17 @@ function enterValue(value) {
 
 // Functions for solving equation
 function solveEquation() {
-    if (sq == "\^2") {
-        let equation = document.getElementById("input").value;
-        let result = Math.sqrt(equation);
-        document.getElementById("result").value = result;
-    } else {
-        let equation = document.getElementById("input").value;
-        let result = eval(equation);
-        document.getElementById("result").value = result;
+    let input = document.getElementById("input").value
+    input = input.replace("^2", "**2");
+    input = input.replace("√", "//2");
+    let result = eval(input);
+    document.getElementById("result").value = result;
+    if (result == "isNaN" || result == "Infinity" || result == "null") {
+        document.getElementById("result").value = "ERROR";
+    } 
+    else if (input == "") {
+        document.getElementById("result").value = "";
     }
-}
-function squareRoot() {
-    sq = "\^2";
-    document.getElementById("input").value += value;
 }
 
 // Functions to clear the calculator
