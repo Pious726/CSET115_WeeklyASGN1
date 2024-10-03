@@ -3,8 +3,10 @@ let operation = "";
 
 
 // Functions for operation input
-function enterEvent(buttonPress) {
-    document.getElementById("input").value += val;
+function dis(val) {
+    document.getElementById("result").value += val
+}
+function enterValue(buttonPress) {
     if (buttonPress.key == "0" || buttonPress.key == "1"
         || buttonPress.key == "2" || buttonPress.key == "3"
         || buttonPress.key == "4" || buttonPress.key == "5"
@@ -14,7 +16,7 @@ function enterEvent(buttonPress) {
         || buttonPress.key == "*" || buttonPress.key == "/"
         || buttonPress.key == "^2" || buttonPress.key == "√") 
         {
-        document.getElementById("input").value += buttonPress.key
+        document.getElementById("result").value += buttonPress.key
     }
 }
 
@@ -27,7 +29,7 @@ function equalsButton() {
     }
 }
 function solveEquation() {
-    let x = document.getElementById("input").value;
+    let x = document.getElementById("result").value;
     let y = math.evaluate(x)
     document.getElementById("result").value = y
 }
@@ -35,7 +37,7 @@ function solveEquation() {
 
 // Functions to clear the calculator
 function clearInput() {
-    document.getElementById("input").value = "";
+    document.getElementById("result").value = "";
 }
 function clearResult() {
     document.getElementById("result").value = "";
