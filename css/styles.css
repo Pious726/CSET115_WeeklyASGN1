@@ -4,3 +4,9 @@
     border: 0;
     box-sizing: border-box;
 }
+
+ .calculator {
+    display:grid;
+    padding: 20px;
+    background-color: aqua;
+ }
