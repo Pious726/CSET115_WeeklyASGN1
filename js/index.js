@@ -3,10 +3,8 @@ let operation = "";
 
 
 // Functions for operation input
-function enterValues(val) {
-    document.getElementById("input").value += val;
-}
 function enterEvent(buttonPress) {
+    document.getElementById("input").value += val;
     if (buttonPress.key == "0" || buttonPress.key == "1"
         || buttonPress.key == "2" || buttonPress.key == "3"
         || buttonPress.key == "4" || buttonPress.key == "5"
