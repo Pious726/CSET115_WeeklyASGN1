@@ -4,7 +4,7 @@ let operation = "";
 
 // Functions for operation input
 function enterValues(val) {
-    document.getElementById("result").value += val;
+    document.getElementById("input").value += val;
 }
 function enterEvent(buttonPress) {
     if (buttonPress.key == "0" || buttonPress.key == "1"
