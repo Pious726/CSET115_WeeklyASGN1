@@ -3,6 +3,7 @@ let operation = "";
 
 
 // Functions for operation input
+<<<<<<< HEAD
 
 function dis(val) {
     document.getElementById("result").value += val
@@ -20,6 +21,10 @@ function enterEvent(buttonPress) {
         {
         document.getElementById("input").value += buttonPress.key
     }
+=======
+function enterValue(value) {
+    document.getElementById("input").value += value;
+>>>>>>> 3733a2a13105f546fb9ab8b6efd50e5a5542b00f
 }
 
 
@@ -31,9 +36,7 @@ function equalsButton() {
     }
 }
 function solveEquation() {
-    let x = document.getElementById("input").value;
-    let y = math.evaluate(x)
-    document.getElementById("result").value = y
+    
 }
 
 
@@ -43,4 +46,8 @@ function clearInput() {
 }
 function clearResult() {
     document.getElementById("result").value = "";
+}
+function deleteInput() {
+    let del = document.getElementById("result");
+    del.value = del.value.slice(0, -1);
 }
