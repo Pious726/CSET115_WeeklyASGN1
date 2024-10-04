@@ -10,53 +10,44 @@
     <h1>Calculator</h1>
     <div class="calculator">
         <div id="buttons">
+            <textarea id="input"></textarea>
+            <textarea id="result"></textarea>
             <table>
-            <tr>
-                <textarea id="input"></textarea>
-            </tr>
-            <tr>
-                <textarea id="result"></textarea>
-            </tr>    
-            <tr>
-            <td><button onclick="enterValue('%')">%</button></td>
-            <td><button onclick="clearInput()">C</button></td> 
-            <td><button onclick="clearEverything()">CE</button></td>
-            <td><button onclick="deleteInput()">D</button></td>
-            </tr>
-            
-            
-            <tr>
-            <td><button onclick="enterValue('1/x')">1/x</button></td>
-            <td><button onclick="enterValue('^2')">^2</button></td>
-            <td><button onclick="enterValue('√')">√</button></td>
-            <td><button onclick="enterValue('/')">/</button></td>
-            </tr>
-
-           <tr>
-            <td><button onclick="enterValue('7')">7</button></td>
-            <td><button onclick="enterValue('8')">8</button></td>
-            <td><button onclick="enterValue('9')">9</button></td>
-            <td><button onclick="enterValue('*')">*</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="enterValue('4')">4</button></td>
-                <td><button onclick="enterValue('5')">5</button></td>
-                <td><button onclick="enterValue('6')">6</button></td> 
-                <td><button onclick="enterValue('-')">-</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="enterValue('1')">1</button></td>
-                <td><button onclick="enterValue('2')">2</button></td>
-                <td><button onclick="enterValue('3')">3</button></td>
-                <td><button onclick="enterValue('+')">+</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="enterValue('.')">un</button></td>
-                <td><button onclick="enterValue('0')">0</button></td>
-                <td><button onclick="enterValue('.')">.</button></td>
-                <td><button onclick="solveEquation()">=</button></td>
-
-             
+                <tr>
+                    <td><button onclick="enterValue('%')">%</button></td>
+                    <td><button onclick="clearInput()">C</button></td> 
+                    <td><button onclick="clearEverything()">CE</button></td>
+                    <td><button onclick="deleteInput()">D</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="enterValue('1/x')">1/x</button></td>
+                    <td><button onclick="enterValue('^2')">^2</button></td>
+                    <td><button onclick="enterValue('√')">√</button></td>
+                    <td><button onclick="enterValue('/')">/</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="enterValue('7')">7</button></td>
+                    <td><button onclick="enterValue('8')">8</button></td>
+                    <td><button onclick="enterValue('9')">9</button></td>
+                    <td><button onclick="enterValue('*')">*</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="enterValue('4')">4</button></td>
+                    <td><button onclick="enterValue('5')">5</button></td>
+                    <td><button onclick="enterValue('6')">6</button></td> 
+                    <td><button onclick="enterValue('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="enterValue('1')">1</button></td>
+                    <td><button onclick="enterValue('2')">2</button></td>
+                    <td><button onclick="enterValue('3')">3</button></td>
+                    <td><button onclick="enterValue('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="enterValue('.')">un</button></td>
+                    <td><button onclick="enterValue('0')">0</button></td>
+                    <td><button onclick="enterValue('.')">.</button></td>
+                    <td><button onclick="solveEquation()">=</button></td> 
                 </tr>
             </table>
         </div>

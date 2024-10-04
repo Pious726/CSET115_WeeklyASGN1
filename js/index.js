@@ -1,7 +1,3 @@
-let sq = "";
-
-
-
 // Functions for operation input
 function enterValue(value) {
     document.getElementById("input").value += value;
@@ -12,34 +8,6 @@ function enterValue(value) {
 function solveEquation() {
     let input = document.getElementById("input").value
     input = input.replace("^2", "**2");
-    input = input.replace("%", "/100")
-     while (input.includes("√")) {
-        let startIndex = input.indexOf("√");
-        let endIndex = startIndex + 1;
-        
-        // Find the next number (if any) following the square root
-        while (endIndex < input.length && !isNaN(input[endIndex]) || input[endIndex] === '.') {
-            endIndex++;
-        }
-
-        // Extract the number after √
-        let number = input.substring(startIndex + 1, endIndex);
-        // Replace "√" with Math.sqrt(number)
-        input = input.replace("√" + number, `Math.sqrt(${number})`);
-    }
-
-    let result = eval(input);
-    document.getElementById("result").value = result;
-    if (result == "isNaN" || result == "Infinity" || result == "null" || result == "undefined") {
-        document.getElementById("result").value = "ERROR";
-    } 
-    else if (input == "") {
-        document.getElementById("result").value = "";
-    }
-}
-function solveEquation() {
-    let input = document.getElementById("input").value
-    input = input.replace("^2", "**2");
     input = input.replace(/√(\d+)/g, "Math.sqrt($1)");
     input = input.replace("%", "/100");
     let result = eval(input);
@@ -47,7 +15,6 @@ function solveEquation() {
     if(result == "isNan" || result == "Infinity" || reslut == "null" || result == "undefined") {
         document.getElementById("result").value = "Error";
     }
-    
 }
 
 
@@ -58,7 +25,6 @@ function clearInput() {
 function clearEverything() {
     document.getElementById("result").value = "";
     document.getElementById("input").value = "";
-    
 }
 function deleteInput() {
     let del = document.getElementById("input");
