@@ -2,6 +2,7 @@ let input = document.getElementById("input");
 let operation = "";
 
 
+
 // Functions for operation input
 function enterValue(value) {
     document.getElementById("input").value += value;
@@ -16,6 +17,15 @@ function equalsButton() {
     }
 }
 function solveEquation() {
+    let input = document.getElementById("input").value
+    input = input.replace("^2", "**2");
+    input = input.replace(/√(\d+)/g, "Math.sqrt($1)");
+    input = input.replace("%", "/100");
+    let result = eval(input);
+    document.getElementById("result").value = result;
+    if(result == "isNan" || result == "Infinity" || reslut == "null" || result == "undefined") {
+        document.getElementById("result").value = "Error";
+    }
     
 }
 
@@ -24,8 +34,10 @@ function solveEquation() {
 function clearInput() {
     document.getElementById("input").value = "";
 }
-function clearResult() {
+function clearEverything() {
     document.getElementById("result").value = "";
+    document.getElementById("input").value = "";
+    
 }
 function deleteInput() {
     let del = document.getElementById("result");
