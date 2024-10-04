@@ -1,7 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+
+}
+
+
+h1 {
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 35px;
+}
 .calculator {
-    background-color: lightgray;
+    background-color: white;
     border: 1px solid black ;
-    box-shadow: 2px 2px 2px black;
+    box-shadow: 2px 5px 10px black;
     width: 380px;
     height: 320px;
     margin: auto;
@@ -14,10 +28,11 @@
 button {
     padding: 10px;
     border: 1px solid black;
+    border-color: black;
     background-color:white;
     font-size: 15px;
-    margin: 0;
-    
+    margin: 0px;
+    width: 62px;
     
     cursor: pointer;
 
@@ -26,3 +41,18 @@ button {
     
 }
 
+textarea {
+    width: 250px;
+    height: 35px;
+    display: block;
+    resize: none;
+    color: black;
+    font-size: 18px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    margin: 0 auto;
+}
+
+table {
+    width: 250px;
+    margin: 0 auto;
+}
