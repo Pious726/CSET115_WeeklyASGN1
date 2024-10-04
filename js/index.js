@@ -11,10 +11,25 @@ function enterValue(value) {
 function solveEquation() {
     let input = document.getElementById("input").value
     input = input.replace("^2", "**2");
-    input = input.replace("√", "//2");
+    input = input.replace("%", "/100")
+     while (input.includes("√")) {
+        let startIndex = input.indexOf("√");
+        let endIndex = startIndex + 1;
+        
+        // Find the next number (if any) following the square root
+        while (endIndex < input.length && !isNaN(input[endIndex]) || input[endIndex] === '.') {
+            endIndex++;
+        }
+
+        // Extract the number after √
+        let number = input.substring(startIndex + 1, endIndex);
+        // Replace "√" with Math.sqrt(number)
+        input = input.replace("√" + number, `Math.sqrt(${number})`);
+    }
+
     let result = eval(input);
     document.getElementById("result").value = result;
-    if (result == "isNaN" || result == "Infinity" || result == "null") {
+    if (result == "isNaN" || result == "Infinity" || result == "null" || result == "undefined") {
         document.getElementById("result").value = "ERROR";
     } 
     else if (input == "") {
