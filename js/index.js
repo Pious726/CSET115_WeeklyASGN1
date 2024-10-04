@@ -1,8 +1,3 @@
-let input = document.getElementById("input");
-let operation = "";
-
-
-
 // Functions for operation input
 function enterValue(value) {
     document.getElementById("input").value += value;
@@ -10,12 +5,6 @@ function enterValue(value) {
 
 
 // Functions for solving equation
-function equalsButton() {
-    if (buttonPress.key == "enter") {
-        let x = document.getElementById("result").value;
-        solveEquation();
-    }
-}
 function solveEquation() {
     let input = document.getElementById("input").value
     input = input.replace("^2", "**2");
@@ -26,7 +15,6 @@ function solveEquation() {
     if(result == "isNan" || result == "Infinity" || reslut == "null" || result == "undefined") {
         document.getElementById("result").value = "Error";
     }
-    
 }
 
 
@@ -37,9 +25,8 @@ function clearInput() {
 function clearEverything() {
     document.getElementById("result").value = "";
     document.getElementById("input").value = "";
-    
 }
 function deleteInput() {
-    let del = document.getElementById("result");
+    let del = document.getElementById("input");
     del.value = del.value.slice(0, -1);
 }
